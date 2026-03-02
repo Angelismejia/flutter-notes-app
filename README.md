@@ -20,6 +20,9 @@ Aplicación móvil de notas desarrollada con Flutter y Hive.
 - Hive (base de datos local)
 - Material Design 3
 
+ ## 🌐 Demo en vivo
+👉 [Ver App](https://flutter-notes-angelis.netlify.app)
+
 ## 🚀 Instalación
 ```bash
 git clone https://github.com/Angelismejia/flutter-notes-app.git
