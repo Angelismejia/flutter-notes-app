@@ -4,6 +4,9 @@ class Note {
   String content;
   DateTime createdAt;
   DateTime updatedAt;
+  bool isFavorite;
+  String category;
+  int colorIndex;
 
   Note({
     this.id,
@@ -11,6 +14,9 @@ class Note {
     required this.content,
     required this.createdAt,
     required this.updatedAt,
+    this.isFavorite = false,
+    this.category = 'Personal',
+    this.colorIndex = 0,
   });
 
   Map<String, dynamic> toMap() {
@@ -20,6 +26,9 @@ class Note {
       'content': content,
       'createdAt': createdAt.millisecondsSinceEpoch,
       'updatedAt': updatedAt.millisecondsSinceEpoch,
+      'isFavorite': isFavorite ? 1 : 0,
+      'category': category,
+      'colorIndex': colorIndex,
     };
   }
 
@@ -30,6 +39,9 @@ class Note {
       content: map['content'] ?? '',
       createdAt: DateTime.fromMillisecondsSinceEpoch(map['createdAt']),
       updatedAt: DateTime.fromMillisecondsSinceEpoch(map['updatedAt']),
+      isFavorite: (map['isFavorite'] ?? 0) == 1,
+      category: map['category'] ?? 'Personal',
+      colorIndex: map['colorIndex'] ?? 0,
     );
   }
 }
